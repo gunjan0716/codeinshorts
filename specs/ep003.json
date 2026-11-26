@@ -1,0 +1,94 @@
+{
+  "type": "leetcode",
+  "id": 217,
+  "title": "Contains Duplicate",
+  "difficulty": "Easy",
+  "hook": "One line of Python beats a nested loop here 👀",
+  "problem": "Return true if any value appears at least twice in the array.",
+  "array": [
+    1,
+    2,
+    3,
+    1
+  ],
+  "approach": "HashSet trick 💡",
+  "idea": "Remember every number you've seen. Seen it before? Duplicate!",
+  "mapLabel": "seen (set)",
+  "steps": [
+    {
+      "hl": [
+        0
+      ],
+      "ptr": {
+        "i": 0
+      },
+      "map": {
+        "1": "✓"
+      },
+      "say": "1 is new → add it to the set"
+    },
+    {
+      "hl": [
+        1
+      ],
+      "ptr": {
+        "i": 1
+      },
+      "map": {
+        "1": "✓",
+        "2": "✓"
+      },
+      "say": "2 is new → add it"
+    },
+    {
+      "hl": [
+        2
+      ],
+      "ptr": {
+        "i": 2
+      },
+      "map": {
+        "1": "✓",
+        "2": "✓",
+        "3": "✓"
+      },
+      "say": "3 is new → add it"
+    },
+    {
+      "found": [
+        0,
+        3
+      ],
+      "ptr": {
+        "i": 3
+      },
+      "map": {
+        "1": "✓",
+        "2": "✓",
+        "3": "✓"
+      },
+      "say": "1 is already in the set → true ✅"
+    }
+  ],
+  "code": "def containsDuplicate(nums):\n    seen = set()\n    for num in nums:\n        if num in seen:\n            return True\n        seen.add(num)\n    return False",
+  "lang": "python",
+  "time": "O(n)",
+  "space": "O(n)",
+  "tip": "Sorting works too: O(n log n) time, O(1) space",
+  "cta": "Next: Valid Parentheses 🧩 Don't miss it!",
+  "publishAt": "2026-11-26T13:00:00+05:30",
+  "yt": {
+    "title": "Contains Duplicate in 30 Seconds ⚡ LeetCode 217 #shorts",
+    "description": "LeetCode 217 – Contains Duplicate solved with a HashSet.\n\n⏱ Time: O(n) | Space: O(n)\n\nA new coding short every day 👉 Subscribe @codeinshortsdev\n\n#leetcode #dsa #coding #python #interviewprep #shorts #programming #codinginterview",
+    "tags": [
+      "leetcode",
+      "contains duplicate",
+      "leetcode 217",
+      "dsa",
+      "hashset",
+      "python",
+      "coding interview",
+      "coding shorts"
+    ]
+  }
+}
