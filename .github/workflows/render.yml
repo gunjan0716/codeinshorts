@@ -1,0 +1,44 @@
+name: Render Shorts
+
+on:
+  push:
+    branches: [main]
+    paths: ['specs/**', 'engine.js', 'render.js', 'preview.html', '.github/workflows/render.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency: { group: render, cancel-in-progress: false }
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fonts and ffmpeg
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq fonts-noto-color-emoji fonts-dejavu fonts-liberation ffmpeg
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - run: npm install --no-audit --no-fund
+      - name: Restore already-rendered videos
+        run: |
+          git fetch origin gh-videos --depth=1 || true
+          if git rev-parse --verify origin/gh-videos >/dev/null 2>&1; then mkdir -p site && git --work-tree=site checkout origin/gh-videos -- . && git reset -q; fi
+      - run: CHROME_PATH=$(which google-chrome || which chromium) node render.js
+      - name: Save videos branch
+        run: |
+          cd site && git init -q && git checkout -q -b gh-videos && git add -A
+          git -c user.name=bot -c user.email=bot@users.noreply.github.com commit -qm "videos"
+          git push -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" gh-videos
+      - uses: actions/upload-pages-artifact@v3
+        with: { path: site }
+  deploy:
+    needs: render
+    runs-on: ubuntu-latest
+    environment: { name: github-pages, url: '${{ steps.d.outputs.page_url }}' }
+    steps:
+      - id: d
+        uses: actions/deploy-pages@v4
