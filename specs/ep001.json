@@ -1,0 +1,90 @@
+{
+  "type": "leetcode",
+  "id": 1,
+  "title": "Two Sum",
+  "difficulty": "Easy",
+  "hook": "The most asked interview question 👀 Don't write O(n²)!",
+  "problem": "Find two numbers in the array that add up to target. Return their indices.",
+  "array": [
+    2,
+    7,
+    11,
+    15
+  ],
+  "target": 9,
+  "approach": "HashMap trick 💡",
+  "idea": "For every number ask: have I already seen (target − num)?",
+  "mapLabel": "seen {num → index}",
+  "steps": [
+    {
+      "hl": [
+        0
+      ],
+      "ptr": {
+        "i": 0
+      },
+      "vars": "need = 9 − 2 = 7",
+      "map": {},
+      "say": "i = 0: 7 is not in the map yet 🤔"
+    },
+    {
+      "hl": [
+        0
+      ],
+      "ptr": {
+        "i": 0
+      },
+      "map": {
+        "2": 0
+      },
+      "say": "Store 2 in the map → {2: 0}"
+    },
+    {
+      "hl": [
+        1
+      ],
+      "ptr": {
+        "i": 1
+      },
+      "vars": "need = 9 − 7 = 2",
+      "map": {
+        "2": 0
+      },
+      "say": "i = 1: need 2 … it's in the map! 🔥"
+    },
+    {
+      "found": [
+        0,
+        1
+      ],
+      "ptr": {
+        "i": 1
+      },
+      "map": {
+        "2": 0
+      },
+      "say": "Answer = [0, 1] ✅ in a single pass!"
+    }
+  ],
+  "code": "def twoSum(nums, target):\n    seen = {}\n    for i, num in enumerate(nums):\n        need = target - num\n        if need in seen:\n            return [seen[need], i]\n        seen[num] = i",
+  "lang": "python",
+  "time": "O(n)",
+  "space": "O(n)",
+  "tip": "Brute force O(n²) → HashMap O(n) 🚀",
+  "cta": "Next: Valid Parentheses 🧩 Don't miss it!",
+  "publishAt": "2026-11-27T13:00:00+05:30",
+  "yt": {
+    "title": "Two Sum in 40 Seconds 🔥 LeetCode #1 HashMap Trick #shorts",
+    "description": "LeetCode 1 – Two Sum solved in O(n) with a HashMap.\n\n⏱ Time: O(n) | Space: O(n)\n\nA new coding short every day 👉 Subscribe @codeinshortsdev\n\n#leetcode #dsa #coding #python #interviewprep #shorts #programming #codinginterview",
+    "tags": [
+      "leetcode",
+      "two sum",
+      "dsa",
+      "coding interview",
+      "python",
+      "hashmap",
+      "leetcode 1",
+      "coding shorts"
+    ]
+  }
+}

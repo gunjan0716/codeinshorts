@@ -1,0 +1,69 @@
+{
+  "type": "phone",
+  "id": 2,
+  "tag": "Flutter Tip",
+  "title": "Dark Mode in Flutter — in 1 line 🌙",
+  "hook": "Your users want dark mode… and you only need one line!",
+  "screens": [
+    {
+      "bar": "Settings",
+      "items": [
+        "Profile|Gunjan",
+        "Notifications|On",
+        "Dark mode|Tap to switch",
+        "About|v1.0"
+      ],
+      "toggle": 2,
+      "tap": 2,
+      "say": "Tap the toggle 👆"
+    },
+    {
+      "bar": "Settings",
+      "dark": true,
+      "accent": "#8B5CF6",
+      "items": [
+        "Profile|Gunjan",
+        "Notifications|On",
+        "Dark mode|On",
+        "About|v1.0"
+      ],
+      "say": "The whole app turns dark instantly 😎"
+    },
+    {
+      "bar": "Inbox",
+      "dark": true,
+      "accent": "#0EA5E9",
+      "items": [
+        "Aarav|Code review done ✅",
+        "Riya|Standup at 10?",
+        "Build bot|Release v2 ready",
+        "Alex|Lunch? 🍕"
+      ],
+      "fab": true,
+      "snack": "Theme saved",
+      "say": "Every screen follows automatically 💯"
+    }
+  ],
+  "code": "MaterialApp(\n  theme: ThemeData.light(),\n  darkTheme: ThemeData.dark(),\n  themeMode: ThemeMode.system, // 👈 that's it!\n  home: HomePage(),\n);",
+  "lang": "main.dart",
+  "points": [
+    "ThemeMode.system follows the phone's setting",
+    "Use ThemeMode.dark / light for a manual toggle",
+    "ColorScheme.fromSeed builds both themes from one color"
+  ],
+  "cta": "Follow for daily Flutter + DSA tips",
+  "publishAt": "2026-11-28T13:00:00+05:30",
+  "yt": {
+    "title": "Flutter Dark Mode in 1 Line 🌙 #flutter #shorts",
+    "description": "Add dark mode to your Flutter app with themeMode!\n\nMaterialApp(theme, darkTheme, themeMode: ThemeMode.system)\n\nA new coding short every day 👉 Subscribe @codeinshortsdev\n\n#flutter #dart #appdevelopment #mobiledev #coding #shorts #programming",
+    "tags": [
+      "flutter",
+      "flutter dark mode",
+      "dart",
+      "flutter tips",
+      "app development",
+      "mobile development",
+      "coding shorts"
+    ]
+  }
+}
