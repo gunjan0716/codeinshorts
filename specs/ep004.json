@@ -1,0 +1,112 @@
+{
+  "type": "leetcode",
+  "id": 20,
+  "title": "Valid Parentheses",
+  "difficulty": "Easy",
+  "hook": "Most people forget the empty-stack check here 👀",
+  "problem": "Return true if every bracket is closed by the same type, in the right order.",
+  "array": [
+    "(",
+    "{",
+    "[",
+    "]",
+    "}",
+    ")"
+  ],
+  "approach": "Stack trick 💡",
+  "idea": "Push every opener. Each closer must match the top of the stack.",
+  "mapLabel": "stack (bottom → top)",
+  "steps": [
+    {
+      "hl": [
+        0,
+        1,
+        2
+      ],
+      "ptr": {
+        "i": 2
+      },
+      "map": {
+        "1": "(",
+        "2": "{",
+        "3": "["
+      },
+      "say": "Openers ( { [ → push them on the stack"
+    },
+    {
+      "hl": [
+        3
+      ],
+      "ptr": {
+        "i": 3
+      },
+      "vars": "top '[' == m[']'] ✓",
+      "map": {
+        "1": "(",
+        "2": "{"
+      },
+      "say": "] matches the top [ → pop it ✂️"
+    },
+    {
+      "hl": [
+        4
+      ],
+      "ptr": {
+        "i": 4
+      },
+      "vars": "top '{' == m['}'] ✓",
+      "map": {
+        "1": "("
+      },
+      "say": "} matches { → pop"
+    },
+    {
+      "hl": [
+        5
+      ],
+      "ptr": {
+        "i": 5
+      },
+      "vars": "top '(' == m[')'] ✓",
+      "map": {},
+      "say": ") matches ( → pop. Stack is empty!"
+    },
+    {
+      "found": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "ptr": {
+        "i": 5
+      },
+      "vars": "return not stk → True",
+      "map": {},
+      "say": "Empty stack at the end → true ✅"
+    }
+  ],
+  "code": "def isValid(s):\n    m = {')': '(', ']': '[', '}': '{'}\n    stk = []\n    for c in s:\n        if c not in m:\n            stk.append(c)\n        elif not stk or stk.pop() != m[c]:\n            return False\n    return not stk",
+  "lang": "python",
+  "time": "O(n)",
+  "space": "O(n)",
+  "tip": "Always check the stack is empty at the end: \"((\" is invalid!",
+  "cta": "Next: Best Time to Buy and Sell Stock 🧩 Don't miss it!",
+  "publishAt": "2026-11-29T13:00:00+05:30",
+  "yt": {
+    "title": "Valid Parentheses in 30 Seconds 🧩 LeetCode 20 Stack Trick #shorts",
+    "description": "LeetCode 20 – Valid Parentheses solved with a stack: push openers, pop on matching closers.\n\n⏱ Time: O(n) | Space: O(n)\n\nA new coding short every day 👉 Subscribe @codeinshortsdev\n\n#leetcode #dsa #coding #python #interviewprep #shorts #programming #codinginterview #stack",
+    "tags": [
+      "leetcode",
+      "valid parentheses",
+      "leetcode 20",
+      "stack",
+      "dsa",
+      "coding interview",
+      "python",
+      "coding shorts"
+    ]
+  }
+}
