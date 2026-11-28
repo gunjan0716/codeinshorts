@@ -1,0 +1,116 @@
+{
+  "type": "leetcode",
+  "id": 242,
+  "title": "Valid Anagram",
+  "difficulty": "Easy",
+  "hook": "Sorting works… but counting is faster 👀",
+  "problem": "Return true if t is an anagram of s (same letters, same counts).",
+  "array": [
+    "c",
+    "a",
+    "r",
+    "e"
+  ],
+  "approach": "Letter count trick 💡",
+  "idea": "Count letters of s, then subtract each letter of t.",
+  "mapLabel": "count (from s = race)",
+  "steps": [
+    {
+      "ptr": {
+        "i": 0
+      },
+      "vars": "s = 'race', t = 'care'",
+      "map": {
+        "r": 1,
+        "a": 1,
+        "c": 1,
+        "e": 1
+      },
+      "say": "Count every letter of 'race' 📊"
+    },
+    {
+      "hl": [
+        0
+      ],
+      "ptr": {
+        "i": 0
+      },
+      "map": {
+        "r": 1,
+        "a": 1,
+        "c": 0,
+        "e": 1
+      },
+      "say": "'c' is in the count → 1 becomes 0"
+    },
+    {
+      "hl": [
+        1
+      ],
+      "ptr": {
+        "i": 1
+      },
+      "map": {
+        "r": 1,
+        "a": 0,
+        "c": 0,
+        "e": 1
+      },
+      "say": "'a' → subtract one"
+    },
+    {
+      "hl": [
+        2
+      ],
+      "ptr": {
+        "i": 2
+      },
+      "map": {
+        "r": 0,
+        "a": 0,
+        "c": 0,
+        "e": 1
+      },
+      "say": "'r' → subtract one"
+    },
+    {
+      "found": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "ptr": {
+        "i": 3
+      },
+      "map": {
+        "r": 0,
+        "a": 0,
+        "c": 0,
+        "e": 0
+      },
+      "say": "Every count hits 0 → anagram ✅"
+    }
+  ],
+  "code": "def isAnagram(s, t):\n    count = {}\n    for c in s:\n        count[c] = count.get(c, 0) + 1\n    for c in t:\n        if count.get(c, 0) == 0:\n            return False\n        count[c] -= 1\n    return not any(count.values())",
+  "lang": "python",
+  "time": "O(n)",
+  "space": "O(1)",
+  "tip": "One-liner: Counter(s) == Counter(t)",
+  "cta": "Next: Binary Search 🧩 Don't miss it!",
+  "publishAt": "2026-12-01T13:00:00+05:30",
+  "yt": {
+    "title": "Valid Anagram in 30 Seconds 🔤 LeetCode 242 #shorts",
+    "description": "LeetCode 242 – Valid Anagram solved by counting letters instead of sorting.\n\n💡 One-liner: Counter(s) == Counter(t) | Time: O(n)\n\nA new coding short every day 👉 Subscribe @codeinshortsdev\n\n#leetcode #dsa #coding #python #interviewprep #shorts #programming #codinginterview",
+    "tags": [
+      "leetcode",
+      "valid anagram",
+      "leetcode 242",
+      "hashmap",
+      "dsa",
+      "coding interview",
+      "python",
+      "coding shorts"
+    ]
+  }
+}

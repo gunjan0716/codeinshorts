@@ -1,0 +1,127 @@
+{
+  "type": "leetcode",
+  "id": 704,
+  "title": "Binary Search",
+  "difficulty": "Easy",
+  "hook": "Most people get the loop condition wrong here 👀",
+  "problem": "Find target in a sorted array. Return its index, or -1.",
+  "array": [
+    -1,
+    0,
+    3,
+    5,
+    9,
+    12
+  ],
+  "target": 9,
+  "approach": "Halve the window 💡",
+  "idea": "Check the middle. Too small? Go right. Too big? Go left.",
+  "mapLabel": "pointers",
+  "steps": [
+    {
+      "hl": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "ptr": {
+        "l": 0,
+        "r": 5
+      },
+      "vars": "target = 9",
+      "map": {
+        "l": 0,
+        "r": 5
+      },
+      "say": "Search window: the whole array"
+    },
+    {
+      "hl": [
+        2
+      ],
+      "ptr": {
+        "l": 0,
+        "m": 2,
+        "r": 5
+      },
+      "vars": "nums[2] = 3 < 9",
+      "map": {
+        "l": 0,
+        "m": 2,
+        "r": 5
+      },
+      "say": "3 < 9 → drop the left half ✂️"
+    },
+    {
+      "hl": [
+        3,
+        4,
+        5
+      ],
+      "ptr": {
+        "l": 3,
+        "r": 5
+      },
+      "map": {
+        "l": 3,
+        "r": 5
+      },
+      "say": "Window shrinks to [5, 9, 12]"
+    },
+    {
+      "hl": [
+        4
+      ],
+      "ptr": {
+        "l": 3,
+        "m": 4,
+        "r": 5
+      },
+      "vars": "nums[4] = 9 == 9",
+      "map": {
+        "l": 3,
+        "m": 4,
+        "r": 5
+      },
+      "say": "Middle is 9 → found it! 🎯"
+    },
+    {
+      "found": [
+        4
+      ],
+      "ptr": {
+        "m": 4
+      },
+      "map": {
+        "l": 3,
+        "m": 4,
+        "r": 5
+      },
+      "say": "Return index 4 ✅ in O(log n)"
+    }
+  ],
+  "code": "def search(nums, target):\n    l, r = 0, len(nums) - 1\n    while l <= r:\n        m = (l + r) // 2\n        if nums[m] == target: return m\n        if nums[m] < target: l = m + 1\n        else: r = m - 1\n    return -1",
+  "lang": "python",
+  "time": "O(log n)",
+  "space": "O(1)",
+  "tip": "Use l <= r, or you'll miss a 1-element window",
+  "cta": "Next: Maximum Subarray 🧩 Don't miss it!",
+  "publishAt": "2026-12-02T13:00:00+05:30",
+  "yt": {
+    "title": "Binary Search in 30 Seconds 🎯 LeetCode 704 #shorts",
+    "description": "LeetCode 704 – Binary Search: check the middle and throw away half the array each step.\n\n⏱ Time: O(log n) | Space: O(1)\n\nA new coding short every day 👉 Subscribe @codeinshortsdev\n\n#leetcode #dsa #coding #python #binarysearch #interviewprep #shorts #codinginterview",
+    "tags": [
+      "leetcode",
+      "binary search",
+      "leetcode 704",
+      "dsa",
+      "coding interview",
+      "python",
+      "algorithms",
+      "coding shorts"
+    ]
+  }
+}

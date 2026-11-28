@@ -1,0 +1,119 @@
+{
+  "type": "leetcode",
+  "id": 53,
+  "title": "Maximum Subarray",
+  "difficulty": "Medium",
+  "hook": "The famous Kadane's trick in 30 seconds 👀",
+  "problem": "Find the contiguous subarray with the largest sum.",
+  "array": [
+    -2,
+    1,
+    -3,
+    4,
+    -1,
+    2,
+    1
+  ],
+  "approach": "Kadane's algorithm 💡",
+  "idea": "If the running sum goes negative, drop it and restart.",
+  "mapLabel": "running values",
+  "steps": [
+    {
+      "hl": [
+        1
+      ],
+      "ptr": {
+        "i": 1
+      },
+      "vars": "max(1, -2 + 1) = 1",
+      "map": {
+        "cur": 1,
+        "best": 1
+      },
+      "say": "1 beats -2 + 1 → start fresh at 1"
+    },
+    {
+      "hl": [
+        3
+      ],
+      "ptr": {
+        "i": 3
+      },
+      "vars": "max(4, -2 + 4) = 4",
+      "map": {
+        "cur": 4,
+        "best": 4
+      },
+      "say": "Sum was -2 → drop it, restart at 4 🔄"
+    },
+    {
+      "hl": [
+        3,
+        4
+      ],
+      "ptr": {
+        "i": 4
+      },
+      "vars": "max(-1, 4 - 1) = 3",
+      "map": {
+        "cur": 3,
+        "best": 4
+      },
+      "say": "-1 hurts, but the sum stays positive"
+    },
+    {
+      "hl": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "ptr": {
+        "i": 6
+      },
+      "vars": "3 + 2 + 1 = 6",
+      "map": {
+        "cur": 6,
+        "best": 6
+      },
+      "say": "Keep adding → sum reaches 6 📈"
+    },
+    {
+      "found": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "ptr": {
+        "i": 6
+      },
+      "map": {
+        "cur": 6,
+        "best": 6
+      },
+      "say": "Best: [4, -1, 2, 1] = 6 ✅"
+    }
+  ],
+  "code": "def maxSubArray(nums):\n    cur = best = nums[0]\n    for x in nums[1:]:\n        cur = max(x, cur + x)\n        best = max(best, cur)\n    return best",
+  "lang": "python",
+  "time": "O(n)",
+  "space": "O(1)",
+  "tip": "Start best at nums[0] so all-negative arrays work",
+  "cta": "Next: Climbing Stairs 🧩 Don't miss it!",
+  "publishAt": "2026-12-03T13:00:00+05:30",
+  "yt": {
+    "title": "Maximum Subarray with Kadane's Trick ⚡ LeetCode 53 #shorts",
+    "description": "LeetCode 53 – Maximum Subarray using Kadane's algorithm: drop the running sum when it turns negative.\n\n⏱ Time: O(n) | Space: O(1)\n\nA new coding short every day 👉 Subscribe @codeinshortsdev\n\n#leetcode #dsa #coding #python #kadane #interviewprep #shorts #codinginterview",
+    "tags": [
+      "leetcode",
+      "maximum subarray",
+      "kadane algorithm",
+      "leetcode 53",
+      "dsa",
+      "coding interview",
+      "python",
+      "coding shorts"
+    ]
+  }
+}
