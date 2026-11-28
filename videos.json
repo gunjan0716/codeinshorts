@@ -1,0 +1,161 @@
+[
+  {
+    "id": "ep001",
+    "file": "videos/ep001.mp4",
+    "thumb": "videos/ep001.jpg",
+    "yt": {
+      "title": "Two Sum in 40 Seconds 🔥 LeetCode #1 HashMap Trick #shorts",
+      "description": "LeetCode 1 – Two Sum solved in O(n) with a HashMap.\n\n⏱ Time: O(n) | Space: O(n)\n\nA new coding short every day 👉 Subscribe @codeinshortsdev\n\n#leetcode #dsa #coding #python #interviewprep #shorts #programming #codinginterview",
+      "tags": [
+        "leetcode",
+        "two sum",
+        "dsa",
+        "coding interview",
+        "python",
+        "hashmap",
+        "leetcode 1",
+        "coding shorts"
+      ]
+    },
+    "publishAt": "2026-11-27T13:00:00+05:30"
+  },
+  {
+    "id": "ep002",
+    "file": "videos/ep002.mp4",
+    "thumb": "videos/ep002.jpg",
+    "yt": {
+      "title": "Flutter Dark Mode in 1 Line 🌙 #flutter #shorts",
+      "description": "Add dark mode to your Flutter app with themeMode!\n\nMaterialApp(theme, darkTheme, themeMode: ThemeMode.system)\n\nA new coding short every day 👉 Subscribe @codeinshortsdev\n\n#flutter #dart #appdevelopment #mobiledev #coding #shorts #programming",
+      "tags": [
+        "flutter",
+        "flutter dark mode",
+        "dart",
+        "flutter tips",
+        "app development",
+        "mobile development",
+        "coding shorts"
+      ]
+    },
+    "publishAt": "2026-11-28T13:00:00+05:30"
+  },
+  {
+    "id": "ep003",
+    "file": "videos/ep003.mp4",
+    "thumb": "videos/ep003.jpg",
+    "yt": {
+      "title": "Contains Duplicate in 30 Seconds ⚡ LeetCode 217 #shorts",
+      "description": "LeetCode 217 – Contains Duplicate solved with a HashSet.\n\n⏱ Time: O(n) | Space: O(n)\n\nA new coding short every day 👉 Subscribe @codeinshortsdev\n\n#leetcode #dsa #coding #python #interviewprep #shorts #programming #codinginterview",
+      "tags": [
+        "leetcode",
+        "contains duplicate",
+        "leetcode 217",
+        "dsa",
+        "hashset",
+        "python",
+        "coding interview",
+        "coding shorts"
+      ]
+    },
+    "publishAt": "2026-11-26T13:00:00+05:30"
+  },
+  {
+    "id": "ep004",
+    "file": "videos/ep004.mp4",
+    "thumb": "videos/ep004.jpg",
+    "yt": {
+      "title": "Valid Parentheses in 30 Seconds 🧩 LeetCode 20 Stack Trick #shorts",
+      "description": "LeetCode 20 – Valid Parentheses solved with a stack: push openers, pop on matching closers.\n\n⏱ Time: O(n) | Space: O(n)\n\nA new coding short every day 👉 Subscribe @codeinshortsdev\n\n#leetcode #dsa #coding #python #interviewprep #shorts #programming #codinginterview #stack",
+      "tags": [
+        "leetcode",
+        "valid parentheses",
+        "leetcode 20",
+        "stack",
+        "dsa",
+        "coding interview",
+        "python",
+        "coding shorts"
+      ]
+    },
+    "publishAt": "2026-11-29T13:00:00+05:30"
+  },
+  {
+    "id": "ep005",
+    "file": "videos/ep005.mp4",
+    "thumb": "videos/ep005.jpg",
+    "yt": {
+      "title": "Best Time to Buy and Sell Stock 📈 LeetCode 121 in 30s #shorts",
+      "description": "LeetCode 121 – Best Time to Buy and Sell Stock in one pass: track the cheapest price and the best profit.\n\n⏱ Time: O(n) | Space: O(1)\n\nA new coding short every day 👉 Subscribe @codeinshortsdev\n\n#leetcode #dsa #coding #python #interviewprep #shorts #programming #codinginterview",
+      "tags": [
+        "leetcode",
+        "best time to buy and sell stock",
+        "leetcode 121",
+        "dsa",
+        "coding interview",
+        "python",
+        "greedy",
+        "coding shorts"
+      ]
+    },
+    "publishAt": "2026-11-30T13:00:00+05:30"
+  },
+  {
+    "id": "ep006",
+    "file": "videos/ep006.mp4",
+    "thumb": "videos/ep006.jpg",
+    "yt": {
+      "title": "Valid Anagram in 30 Seconds 🔤 LeetCode 242 #shorts",
+      "description": "LeetCode 242 – Valid Anagram solved by counting letters instead of sorting.\n\n💡 One-liner: Counter(s) == Counter(t) | Time: O(n)\n\nA new coding short every day 👉 Subscribe @codeinshortsdev\n\n#leetcode #dsa #coding #python #interviewprep #shorts #programming #codinginterview",
+      "tags": [
+        "leetcode",
+        "valid anagram",
+        "leetcode 242",
+        "hashmap",
+        "dsa",
+        "coding interview",
+        "python",
+        "coding shorts"
+      ]
+    },
+    "publishAt": "2026-12-01T13:00:00+05:30"
+  },
+  {
+    "id": "ep007",
+    "file": "videos/ep007.mp4",
+    "thumb": "videos/ep007.jpg",
+    "yt": {
+      "title": "Binary Search in 30 Seconds 🎯 LeetCode 704 #shorts",
+      "description": "LeetCode 704 – Binary Search: check the middle and throw away half the array each step.\n\n⏱ Time: O(log n) | Space: O(1)\n\nA new coding short every day 👉 Subscribe @codeinshortsdev\n\n#leetcode #dsa #coding #python #binarysearch #interviewprep #shorts #codinginterview",
+      "tags": [
+        "leetcode",
+        "binary search",
+        "leetcode 704",
+        "dsa",
+        "coding interview",
+        "python",
+        "algorithms",
+        "coding shorts"
+      ]
+    },
+    "publishAt": "2026-12-02T13:00:00+05:30"
+  },
+  {
+    "id": "ep008",
+    "file": "videos/ep008.mp4",
+    "thumb": "videos/ep008.jpg",
+    "yt": {
+      "title": "Maximum Subarray with Kadane's Trick ⚡ LeetCode 53 #shorts",
+      "description": "LeetCode 53 – Maximum Subarray using Kadane's algorithm: drop the running sum when it turns negative.\n\n⏱ Time: O(n) | Space: O(1)\n\nA new coding short every day 👉 Subscribe @codeinshortsdev\n\n#leetcode #dsa #coding #python #kadane #interviewprep #shorts #codinginterview",
+      "tags": [
+        "leetcode",
+        "maximum subarray",
+        "kadane algorithm",
+        "leetcode 53",
+        "dsa",
+        "coding interview",
+        "python",
+        "coding shorts"
+      ]
+    },
+    "publishAt": "2026-12-03T13:00:00+05:30"
+  }
+]
